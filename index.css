@@ -145,16 +145,15 @@ main section#hero {
 
 main section#hero h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 55px;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: var(--s-white);
 }
 
 main section#hero .arrow-icon {
-  height: 80px;
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -336,7 +335,7 @@ footer a:hover svg path {
 
 footer .footer-title {
   font-weight: 900;
-  font-size: 20px;
+  font-size: 25px;
   font-family: var(--f-fra);
   margin-bottom: 30px;
 }
@@ -423,7 +422,6 @@ footer .footer-row:nth-child(3) .footer-links {
   }
   main section#hero .arrow-icon {
     top: 70%;
-    height: 90px;
   }
   main section.grid {
     height: auto;
