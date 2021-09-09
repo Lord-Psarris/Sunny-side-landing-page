@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;600,900&family=Fraunces:wght@700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 71%);
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0%);
+}
+
+:root {
+  /* primary colors */
+  --p-soft-red: hsl(7, 99%, 70%);
+  --p-yellow: hsl(51, 100%, 49%);
+  --p-cyan: hsl(167, 40%, 24%);
+  --p-dblue: hsl(198, 62%, 26%);
+  --p-mcyan: hsl(168, 34%, 41%);
+
+  /* secondary colors */
+  --s-vdes-blue: hsl(212, 27%, 19%);
+  --s-vgre-blue: hsl(213, 9%, 39%);
+  --s-dgre-blue: hsl(232, 10%, 55%);
+  --s-gre-blue: hsl(210, 4%, 67%);
+  --s-white: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --f-bar: "Barlow", sans-serif;
+  --f-fra: "Fraunces", serif;
+}
+
+html body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--f-fra);
+}
+
+p,
+a,
+span {
+  font-family: var(--f-bar);
+}
+
+header {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+header nav {
+  background-color: none;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header nav .nav-name {
+  font-size: 30px;
+  font-family: var(--f-bar);
+  font-weight: 900;
+  color: var(--s-white);
+}
+
+header nav .nav-items-xl ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav .nav-items-xl ul li {
+  margin: 0 15px;
+}
+
+header nav .nav-items-xl ul li a {
+  color: var(--s-white);
+  font-family: var(--f-bar);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+header nav .nav-items-xl ul li a.nav-button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: var(--s-white);
+  color: var(--p-dblue);
+  font-family: var(--f-fra);
+}
+
+header nav .nav-items-xl ul li a.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--s-white);
+}
+
+header nav .nav-items-md {
+  display: none;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  z-index: -1;
+}
+
+main section#hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10rem;
+}
+
+main section#hero h1 {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--s-white);
+}
+
+main section#hero .arrow-icon {
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main section.grid {
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main section.grid .col-6 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+main section.grid .col-6.text-box {
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main section.grid .col-6.text-box h2 {
+  color: var(--p-dblue);
+  font-weight: 600;
+}
+
+main section.grid .col-6.text-box p {
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--s-dgre-blue);
+}
+
+main section.grid .col-6.text-box a {
+  color: var(--s-vdes-blue);
+  font-weight: 600;
+  font-family: var(--f-fra);
+  width: 100px;
+}
+
+main section.grid .col-6.custom {
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+}
+
+main section.grid .col-6.custom:nth-child(1) h2 {
+  color: var(--p-mcyan);
+  font-weight: 600;
+}
+
+main section.grid .col-6.custom:nth-child(2) h2 {
+  color: var(--p-dblue);
+  font-weight: 600;
+}
+
+main section.grid .col-6.custom:nth-child(1) p {
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--p-mcyan);
+}
+
+main section.grid .col-6.custom:nth-child(2) p {
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--p-dblue);
+}
+
+main section#testimonials {
+  width: 100%;
+  padding: 60px 50px;
+  min-height: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--s-white);
+}
+
+main section#testimonials h3 {
+  color: var(--s-gre-blue);
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin: 40px 0 80px 0;
+  text-transform: uppercase;
+}
+
+main section#testimonials .row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+main section#testimonials .row .testimony {
+  width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 30px auto;
+}
+
+main section#testimonials .row .testimony img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+main section#testimonials .row .testimony p {
+  padding: 0 15px;
+  margin: 50px 0;
+  font-weight: 600;
+  color: var(--p-dblue);
+  font-size: 14px;
+}
+
+main section#testimonials .row .testimony h4 {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--s-vdes-blue);
+}
+
+main section#testimonials .row .testimony span {
+  font-size: 11px;
+  margin-top: 5px;
+  color: var(--s-gre-blue);
+  font-weight: 900;
+}
+
+main section#image-grid {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+main section#image-grid picture {
+  width: 25%;
+}
+
+main section#image-grid img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+footer {
+  height: 40vh;
+  background-color: var(--p-mcyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: var(--p-cyan);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer a svg path {
+  fill: var(--p-cyan);
+}
+
+footer a:hover {
+  color: var(--s-white);
+}
+
+footer a:hover svg path {
+  fill: var(--s-white);
+}
+
+footer .footer-title {
+  font-weight: 900;
+  font-size: 20px;
+  font-family: var(--f-fra);
+  margin-bottom: 30px;
+}
+
+footer .footer-row {
+  margin: 0 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .footer-row .footer-links {
+  margin: 0 20px;
+}
+
+footer .footer-row:nth-child(3) {
+  margin: 20px 0;
+}
+
+footer .footer-row:nth-child(3) .footer-links {
+  margin: 0 10px;
+}
+
+.nav-items-hover {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  header nav {
+    padding: 40px 20px;
+  }
+  header nav .nav-items-xl {
+    display: none;
+  }
+
+  header nav .nav-items-md {
+    display: block;
+  }
+
+  header .nav-items-hover.active {
+    display: block;
+    transition: 0.8s ease-in-out;
+    width: 90%;
+    height: 50vh;
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    right: 10%;
+    background-color: var(--s-white);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  header .nav-items-hover.active ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+  }
+
+  header .nav-items-hover.active ul li a {
+    color: var(--s-vgre-blue);
+    font-weight: 600;
+  }
+
+  header .nav-items-hover.active ul li a.nav-button {
+    font-family: var(--f-fra);
+    font-weight: 900;
+    color: #000;
+    padding: 20px 25px;
+    border-radius: 50px;
+    background: var(--p-yellow);
+  }
+
+  main section#hero {
+    padding: 11rem 10px;
+  }
+  main section#hero h1 {
+    font-size: 30px;
+  }
+  main section#hero .arrow-icon {
+    top: 70%;
+    height: 90px;
+  }
+  main section.grid {
+    height: auto;
+    flex-flow: column wrap;
+  }
+
+  main section.grid:nth-child(2) {
+    flex-flow: column-reverse wrap;
+  }
+  main section.grid .col-6 {
+    width: 100%;
+    height: 60vh;
+    align-items: center;
+  }
+
+  main section.grid .col-6.text-box {
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  main section.grid .col-6.custom {
+    height: 100vh;
+    padding: 80px 20px;
+  }
+
+  main section#testimonials {
+    padding: 60px 20px;
+  }
+
+  main section#image-grid picture {
+    width: 50%;
+  }
+}
